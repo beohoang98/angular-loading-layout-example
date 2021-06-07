@@ -1,6 +1,7 @@
 {
   "name": "auth-layout",
   "version": "0.0.0",
+  "description": "Example",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
