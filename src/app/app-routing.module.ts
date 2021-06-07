@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AuthComponent } from './layouts/auth/auth.component';
-import { HomeComponent } from './views/home/home.component';
-import { LoginComponent } from './views/login/login.component';
-import { NotFoundComponent } from './views/not-found/not-found.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { AuthComponent } from "./layouts/auth/auth.component";
+import { HomeComponent } from "./views/home/home.component";
+import { LoginComponent } from "./views/login/login.component";
+import { NotFoundComponent } from "./views/not-found/not-found.component";
 
 const routes: Routes = [
     {
@@ -13,7 +13,7 @@ const routes: Routes = [
             {
                 path: "",
                 component: HomeComponent,
-            }
+            },
         ],
     },
     {
@@ -23,11 +23,11 @@ const routes: Routes = [
     {
         path: "*",
         component: NotFoundComponent,
-    }
+    },
 ];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

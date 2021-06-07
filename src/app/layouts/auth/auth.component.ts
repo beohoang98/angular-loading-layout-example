@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService, AuthState } from 'src/app/services/auth/auth.service';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { AuthService, AuthState } from "../../services/auth/auth.service";
 
 @Component({
-    selector: 'app-auth',
-    templateUrl: './auth.component.html',
-    styleUrls: ['./auth.component.scss']
+    selector: "app-auth",
+    templateUrl: "./auth.component.html",
+    styleUrls: ["./auth.component.scss"],
 })
 export class AuthComponent implements OnInit {
     public loaded = false;
@@ -14,8 +14,8 @@ export class AuthComponent implements OnInit {
 
     constructor(
         private readonly authService: AuthService,
-        private readonly router: Router,
-    ) { }
+        private readonly router: Router
+    ) {}
 
     ngOnInit() {
         this.authService.state.subscribe(this.onAuthStateChange.bind(this));

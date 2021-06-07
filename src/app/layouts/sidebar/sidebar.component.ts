@@ -1,9 +1,9 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 
 @Component({
-    selector: 'app-sidebar',
-    templateUrl: './sidebar.component.html',
-    styleUrls: ['./sidebar.component.scss']
+    selector: "app-sidebar",
+    templateUrl: "./sidebar.component.html",
+    styleUrls: ["./sidebar.component.scss"],
 })
 export class SidebarComponent {
     @Input()
@@ -11,7 +11,7 @@ export class SidebarComponent {
     @Output()
     openChange = new EventEmitter<boolean>();
 
-    constructor() { }
+    constructor() {}
 
     toggle() {
         this.openChange.emit(!this.open);

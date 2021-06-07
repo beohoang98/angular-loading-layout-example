@@ -10,12 +10,13 @@
             },
             "extends": [
                 "plugin:@angular-eslint/recommended",
-                "plugin:@angular-eslint/template/process-inline-templates"
+                "plugin:@angular-eslint/template/process-inline-templates",
+                "plugin:import/recommended",
+                "plugin:import/typescript"
             ],
             "plugins": ["prettier", "import"],
             "rules": {
                 "prettier/prettier": "warn",
-                "import/sort": "warn",
                 "@angular-eslint/directive-selector": [
                     "error",
                     {

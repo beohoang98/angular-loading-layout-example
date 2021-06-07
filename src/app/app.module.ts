@@ -1,16 +1,13 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LayoutsModule } from './layouts/layouts.module';
-import { ViewsModule } from './views/views.module';
-
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { LayoutsModule } from "./layouts/layouts.module";
+import { ViewsModule } from "./views/views.module";
 
 @NgModule({
-    declarations: [
-        AppComponent,
-    ],
+    declarations: [AppComponent],
     imports: [
         CommonModule,
         BrowserModule,
@@ -19,6 +16,6 @@ import { ViewsModule } from './views/views.module';
         ViewsModule,
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

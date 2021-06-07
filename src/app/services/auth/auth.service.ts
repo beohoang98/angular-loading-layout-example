@@ -2,25 +2,26 @@ import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { Subject } from "rxjs";
 
-export type AuthState = {
-    state: "loading" | "not-logged";
-} | {
-    state: "logged";
-    profile: any;
-} | {
-    state: "error";
-    error: Error;
-}
+export type AuthState =
+    | {
+          state: "loading" | "not-logged";
+      }
+    | {
+          state: "logged";
+          profile: any;
+      }
+    | {
+          state: "error";
+          error: Error;
+      };
 
 @Injectable({
-    providedIn: "root"
+    providedIn: "root",
 })
 export class AuthService {
     public readonly state = new Subject<AuthState>();
 
-    constructor(
-        private readonly router: Router
-    ) {
+    constructor(private readonly router: Router) {
         this.state.subscribe(this.logging.bind(this));
     }
 
@@ -33,15 +34,16 @@ export class AuthService {
         setTimeout(() => {
             if (!!localStorage.getItem("logged")) {
                 this.state.next({
-                    state: "logged", profile: {
+                    state: "logged",
+                    profile: {
                         email: "test",
-                        name: "test"
-                    }
+                        name: "test",
+                    },
                 });
                 this.router.navigateByUrl("/");
             } else {
                 this.state.next({
-                    state: "not-logged"
+                    state: "not-logged",
                 });
                 this.router.navigateByUrl("/auth");
             }
