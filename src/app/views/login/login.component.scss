@@ -1,0 +1,44 @@
+@import "theme";
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: $background-grey;
+}
+
+.login {
+    width: 400px;
+    padding: 1em;
+    background-color: $background-light;
+    border-radius: 0.5rem;
+    box-shadow: $box-shadow-normal;
+    text-align: center;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 0;
+}
+
+label {
+    width: 100px;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+input {
+    padding: 0.5rem;
+    flex: 1 1 auto;
+    overflow: auto;
+    background-color: $background-grey;
+    border: none;
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,36 @@
+@import "theme";
+
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.collapse-button {
+    align-self: flex-end;
+    height: 50px;
+    background-color: $primary-color;
+    color: $text-on-dark;
+    border: none;
+    box-shadow: $box-shadow-normal;
+    border-radius: 0 0 0 0.5rem;
+    min-width: 50px;
+    text-align: center;
+}
+
+menu {
+    padding: 0;
+
+    [role=menuitem] {
+        position: relative;
+        padding: 1em;
+
+        span {
+            display: block;
+        }
+
+        &:hover::before {
+            opacity: 1;
+            background-color: $primary-color;
+        }
+    }
+}

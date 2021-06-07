@@ -1,0 +1,45 @@
+@import "theme";
+
+.app {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: $background-light;
+    color: $text-on-light;
+
+    app-sidebar {
+        flex: 0 0 auto;
+        width: fit-content;
+        min-width: 260px;
+        background-color: $background-dark;
+        color: $text-on-dark;
+        transition: 200ms;
+
+        &.collapsed {
+            min-width: 0px;
+        }
+    }
+
+    &-content {
+        flex: 1 1 auto;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: $background-grey;
+    }
+
+    app-toolbar {
+        flex: 0 0 auto;
+        background-color: $primary-color;
+        color: $text-on-dark;
+        box-shadow: $box-shadow-normal;
+        height: 50px;
+    }
+    &-main {
+        flex: 1 1 auto;
+        overflow: auto;
+        padding: 1rem;
+    }
+}

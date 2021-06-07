@@ -1,0 +1,10 @@
+<app-loading *ngIf="!loaded"></app-loading>
+<div class="app" *ngIf="loaded && logged">
+    <app-sidebar [(open)]="sidebarOpen" [class.collapsed]="!sidebarOpen"></app-sidebar>
+    <div class="app-content">
+        <app-toolbar></app-toolbar>
+        <main class="app-main">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>

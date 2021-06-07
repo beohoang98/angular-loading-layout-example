@@ -1,0 +1,16 @@
+<div class="login">
+    <h1>LOGIN</h1>
+    <form (submit)="login($event)">
+        <fieldset [disabled]="submitting">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </fieldset>
+        <fieldset [disabled]="submitting">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </fieldset>
+        <fieldset [disabled]="submitting">
+            <button type="submit">LOGIN</button>
+        </fieldset>
+    </form>
+</div>

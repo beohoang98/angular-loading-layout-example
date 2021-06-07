@@ -1,0 +1,17 @@
+@import "theme";
+
+#loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: $background-grey;
+    color: $text-on-light;
+}
+
+img {
+    margin: 1em 0;
+    filter: drop-shadow($drop-shadow-normal);
+}
